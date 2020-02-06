@@ -2,8 +2,7 @@
 Secure Coding Program Project
 
 
-compile with make
-
 Currently, reads one line from a file
 
-add file name to the command line argument to run
+Compile with make
+Add file name to the command line argument to run
