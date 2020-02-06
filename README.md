@@ -4,4 +4,6 @@ Secure Coding Program Project
 
 compile with make
 
-add file name to the command line argument
+Currently, reads one line from a file
+
+add file name to the command line argument to run
