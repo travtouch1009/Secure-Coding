@@ -2,26 +2,30 @@
 #include <string.h>
 #include <stdlib.h>
 
+#define MAX_LINE_CHAR 1000
+#define MAX_LINE_COUNT 200
 
 void readFile(char *arg)
 {
-	char buf[100];
-	strncpy(buf, arg, sizeof(buf));
-	FILE *fp;
-	char lineBuf[200];
-	//comment
-	fp = fopen(buf, "r");
+        //Copy the filename to buf
+        char buf[100];
+        strncpy(buf, arg, sizeof(buf));
+        buf[sizeof(buf)-1] = '\0';
 
-	if (fp == NULL)
-   	{
-      		perror("Error while opening the file.\n");
-      		exit(EXIT_FAILURE);
-   	}
+        //FID, line storage, and line array
+        FILE *fp;
+        char lineBuf[MAX_LINE_CHAR];
+        char *lines[MAX_LINE_COUNT];
+        fp = fopen(buf, "r");
+	int i = 0;
 
-	fgets(lineBuf, sizeof(lineBuf), fp);
-	lineBuf[sizeof(lineBuf) - 1] = '\0';
-
-	printf("%s", lineBuf);
+        //read the lines of the file to the max line count
+        while(fgets(lineBuf, sizeof(lineBuf), fp) && i < MAX_LINE_COUNT)
+        {
+                lineBuf[sizeof(lineBuf) - 1] = '\0';
+                lines[i] = lineBuf;
+                i++;
+        }
 }
 
 int main(int argc, char **argv)
