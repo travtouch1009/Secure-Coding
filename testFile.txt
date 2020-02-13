@@ -1,1 +1,5 @@
 Testing the file reader!
+We are on the second line
+We are on the third line
+This is the last line
+Just kidding it's this one
