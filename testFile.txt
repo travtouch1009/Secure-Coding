@@ -1,5 +1,5 @@
-Testing the file reader!
-We are on the second line
-We are on the third line
-This is the last line
-Just kidding it's this one
+Testing the file reader on the first line!
+Now we are onto the second line.
+This would be the third line.
+Line number 4 is where this is.
+And lastly we have line number 5.
