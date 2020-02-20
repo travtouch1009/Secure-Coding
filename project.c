@@ -35,7 +35,7 @@ void readFile(char *arg)
 	int upper = counter - 1;
 	int lower = 0;
 	int randNum = (rand() % (upper - lower + 1)) + lower;
-	printf("Random line #%d  :  %s", randNum, lines[randNum];
+	printf("Random line #%d  :  %s", randNum, lines[randNum]);
 }
 
 int main(int argc, char **argv)
